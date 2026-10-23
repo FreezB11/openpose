@@ -139,4 +139,4 @@ html/
 output*/
 
 # CMake build tree
-build/
+build*/
