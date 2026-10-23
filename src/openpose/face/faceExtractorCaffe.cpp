@@ -313,7 +313,7 @@ namespace op
                 #endif
             #else
                 UNUSED(faceRectangles);
-                UNUSED(cvInputData);
+                UNUSED(inputData);
             #endif
         }
         catch (const std::exception& e)

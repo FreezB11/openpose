@@ -454,7 +454,7 @@ namespace op
                 }
             #else
                 UNUSED(handRectangles);
-                UNUSED(cvInputData);
+                UNUSED(inputData);
             #endif
         }
         catch (const std::exception& e)

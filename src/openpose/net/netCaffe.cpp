@@ -1,8 +1,8 @@
 #include <openpose/net/netCaffe.hpp>
+#include <atomic>
+#include <mutex>
 #include <numeric> // std::accumulate
 #ifdef USE_CAFFE
-    #include <atomic>
-    #include <mutex>
     #include <caffe/net.hpp>
     #include <glog/logging.h> // google::InitGoogleLogging
 #endif
