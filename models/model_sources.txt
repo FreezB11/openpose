@@ -1,0 +1,39 @@
+# Where to find the OpenPose network weights.
+#
+# THIS REPOSITORY DOES NOT HOST OR REDISTRIBUTE ANY WEIGHTS. This file only records
+# locations where they have been published, so that models/getModels.sh can fetch them
+# for you. The weights are CMU's work and are covered by CMU's license (see ../LICENSE:
+# academic / non-profit, non-commercial use). You are responsible for complying with it.
+#
+# Format (whitespace separated, one source per line, '#' starts a comment):
+#
+#   <model>  <sha256 or ->  <url>
+#
+# - <model> is one of: body25 coco mpi face hand
+# - Several lines with the same <model> are mirrors; they are tried top to bottom.
+# - Put the real SHA-256 in the second column once you have verified a file. With '-' the
+#   script still downloads, but warns that nothing was verified.
+#
+# Files are saved to:
+#   body25 -> pose/body_25/pose_iter_584000.caffemodel
+#   coco   -> pose/coco/pose_iter_440000.caffemodel
+#   mpi    -> pose/mpi/pose_iter_160000.caffemodel
+#   face   -> face/pose_iter_116000.caffemodel
+#   hand   -> hand/pose_iter_102000.caffemodel
+
+# ---- Original host (CMU / SNU). Reported offline or unreliable in upstream issues. ----
+body25  -  http://vcl.snu.ac.kr/OpenPose/models/pose/body_25/pose_iter_584000.caffemodel
+coco    -  http://vcl.snu.ac.kr/OpenPose/models/pose/coco/pose_iter_440000.caffemodel
+mpi     -  http://vcl.snu.ac.kr/OpenPose/models/pose/mpi/pose_iter_160000.caffemodel
+face    -  http://vcl.snu.ac.kr/OpenPose/models/face/pose_iter_116000.caffemodel
+hand    -  http://vcl.snu.ac.kr/OpenPose/models/hand/pose_iter_102000.caffemodel
+
+# ---- Community mirrors: ADD YOUR OWN LINES HERE after checking them. ----
+# Third-party re-uploads exist, e.g. on Hugging Face:
+#   https://huggingface.co/camenduru/openpose
+#   https://huggingface.co/gaijingeek/openpose-models
+# Their layout changes between commits and they are not affiliated with this project.
+# Open the file page, copy the "download" link (it contains /resolve/), compare the file
+# size with the original, and add a line such as:
+#
+# hand  <sha256>  https://huggingface.co/<user>/<repo>/resolve/main/<path>/pose_iter_102000.caffemodel
